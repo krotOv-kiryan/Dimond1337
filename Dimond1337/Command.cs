@@ -28,7 +28,7 @@ namespace Dimond1337
         {
             action();
         }
-        public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler PropertyChanged;//s1
 
       
     }
