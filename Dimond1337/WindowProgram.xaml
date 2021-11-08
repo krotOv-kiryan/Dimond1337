@@ -1,0 +1,17 @@
+﻿<Window x:Class="Dimond1337.WindowProgram"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dimond1337"
+        mc:Ignorable="d"
+        Title="О программе" Height="281.25" Width="477.125">
+    <Grid Margin="0,0,2,0">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Text=" Данная программа создана для общения. Не забывайте главные правила этикета!"/>
+        <Button Grid.Row="1"   Content="Вернуться назад" HorizontalAlignment="Left" Click="Button_Click" Width="150" Margin="153,0,0,0"/>
+    </Grid>
+</Window>

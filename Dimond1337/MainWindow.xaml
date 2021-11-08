@@ -1,0 +1,39 @@
+﻿<Window x:Class="Dimond1337.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dimond1337"
+        mc:Ignorable="d"
+        Title="Мессенджер" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Menu>
+            <MenuItem Header="Почтовый ящик">
+                <MenuItem Header="Входящие" Command="{Binding OpenInbox}"/>
+                <MenuItem Header="Отправленные" Command="{Binding OpenSent}"/>
+                <MenuItem Header="Корзина" Command="{Binding OpenTrash}"/>
+                <MenuItem Header="Спам" Command="{Binding OpenSpam}"/>
+            </MenuItem>
+
+            <MenuItem Header="Письмо">
+                <MenuItem Header="Создать" Command="{Binding OpenMessage}"/>
+            </MenuItem>
+            
+            <MenuItem Header="Ящик">
+                <MenuItem Header="Выйти из аккаунта" Command="{Binding }"/>
+                <MenuItem Header="Свойства почтовго ящика" Click="Button_ClickA"/>
+            </MenuItem>
+
+            <MenuItem Header="Справка">
+                <MenuItem Header="О программе" Click="Button_ClickB"/>
+            </MenuItem>
+        </Menu>
+
+        <Frame Grid.Row="1" Content="{Binding CurrentPage}" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>
